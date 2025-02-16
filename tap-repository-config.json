@@ -1,0 +1,40 @@
+{
+  "name": "srt-examples",
+  "description": "Examples of SRT (Secure Reliable Transport) connection types",
+  "homepage": "https://github.com/koensayr/srt_example",
+  "license": "MIT",
+  "tap": {
+    "name": "koensayr/srt-examples",
+    "remote": "https://github.com/koensayr/homebrew-srt-examples.git",
+    "branch": "main"
+  },
+  "versions": {
+    "stable": "1.0.0",
+    "head": "main"
+  },
+  "dependencies": {
+    "required": [
+      "cmake",
+      "srt"
+    ],
+    "recommended": [
+      "python@3.9"
+    ]
+  },
+  "install_locations": {
+    "bin": [
+      "srt_example"
+    ],
+    "lib": [],
+    "include": [],
+    "share": [
+      "srt_examples.py"
+    ]
+  },
+  "tests": {
+    "commands": [
+      "srt_example --help",
+      "python3 #{prefix}/share/srt_examples.py --help"
+    ]
+  }
+}
