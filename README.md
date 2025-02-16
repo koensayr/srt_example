@@ -2,9 +2,45 @@
 
 This repository contains example implementations of different SRT (Secure Reliable Transport) connection modes: caller, listener, and rendezvous. The examples demonstrate how to establish connections using each mode and perform basic data transfer.
 
-## Prerequisites
 
-### For C++ Implementation
+## Installation
+
+### Using Homebrew
+The easiest way to install on macOS is using Homebrew:
+
+```bash
+# Add the tap repository
+brew tap koensayr/srt-examples
+
+# Install the package
+brew install srt-examples
+```
+
+This will install both the C++ and Python examples, along with all dependencies.
+
+#### Upgrading
+To upgrade to the latest version:
+```bash
+brew update
+brew upgrade srt-examples
+```
+
+#### Version Information
+- Current stable version: 1.0.0
+- Required dependencies:
+  - libsrt (automatically installed)
+  - cmake (for building)
+  - python@3.9 or later (for Python example)
+
+#### Installation Locations
+After installation:
+- C++ executable: `$(brew --prefix)/bin/srt_example`
+- Python script: `$(brew --prefix)/bin/srt_examples.py`
+
+### Manual Installation
+
+#### Prerequisites
+
 1. CMake (3.10 or higher)
 2. C++11 compatible compiler
 3. libsrt development package

@@ -1,8 +1,14 @@
+#!/usr/bin/env python3
+
 import srt
 import sys
 import time
 import socket
 import threading
+
+# Set script as executable if run directly
+if __name__ == "__main__":
+    sys.exit(main())
 
 def create_srt_socket():
     """Create and configure a basic SRT socket with recommended settings."""
@@ -172,11 +178,16 @@ def srt_rendezvous(host='127.0.0.1', port=9000, peer_host='127.0.0.1', peer_port
                 print(f"[Rendezvous] Error closing socket: {e}")
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python srt_examples.py <mode>")
-        print("Modes: caller, listener, rendezvous")
-        return
-
+    if len(sys.argv) < 2 or sys.argv[1] in ['--help', '-h']:
+        print("Usage: python srt_examples.py <mode> [options]")
+        print("\nModes:")
+        print("  caller     - Start in caller (client) mode")
+        print("  listener   - Start in listener (server) mode")
+        print("  rendezvous - Start in rendezvous (peer-to-peer) mode")
+        print("\nOptions:")
+        print("  peer2      - For rendezvous mode, use alternate port configuration")
+        return 0 if sys.argv[1] in ['--help', '-h'] else 1
+    
     mode = sys.argv[1].lower()
     
     if mode == "caller":
