@@ -2,6 +2,7 @@
 
 This repository contains example implementations of different SRT (Secure Reliable Transport) connection modes: caller, listener, and rendezvous. The examples demonstrate how to establish connections using each mode and perform basic data transfer.
 
+
 ## Installation
 
 ### Using Homebrew
@@ -39,6 +40,7 @@ After installation:
 ### Manual Installation
 
 #### Prerequisites
+
 1. CMake (3.10 or higher)
 2. C++11 compatible compiler
 3. libsrt development package
