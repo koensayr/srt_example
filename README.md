@@ -304,6 +304,8 @@ The VISCA-SRT proxy uses JSON configuration files for both server and client com
 - `latency`: SRT latency in milliseconds
 - `max_bw`: Maximum bandwidth in bits per second
 - `input_buffer`/`output_buffer`: Buffer sizes in bytes
+=======
+This repository contains example implementations of different SRT (Secure Reliable Transport) connection modes: caller, listener, and rendezvous. The examples demonstrate how to establish connections using each mode and perform basic data transfer.
 
 ## Installation
 

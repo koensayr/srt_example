@@ -234,6 +234,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Options:" << std::endl;
         std::cout << "  peer2      - For rendezvous mode, use alternate port configuration" << std::endl;
         return (argc < 2) ? 1 : 0;  // Return 0 if --help was specified
+
     }
 
     // Initialize SRT library
