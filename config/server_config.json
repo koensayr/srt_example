@@ -1,0 +1,46 @@
+{
+    "bind_address": "0.0.0.0",
+    "srt_port": 9000,
+    "logging": {
+        "level": "info",
+        "file": "server.log"
+    },
+    "cameras": [
+        {
+            "id": 1,
+            "name": "Main Stage Camera",
+            "ip_address": "192.168.1.100",
+            "port": 52381,
+            "reconnect_interval": 5000,
+            "ndi_mapping": {
+                "source_name": "MainCam",
+                "tally_enabled": true,
+                "commands": {
+                    "program": [129, 1, 126, 1, 10, 0, 2, 255],
+                    "preview": [129, 1, 126, 1, 10, 0, 1, 255],
+                    "off": [129, 1, 126, 1, 10, 0, 3, 255]
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Side Stage Camera",
+            "ip_address": "192.168.1.101",
+            "port": 52381,
+            "reconnect_interval": 5000
+        }
+    ],
+    "srt_settings": {
+        "latency": 20,
+        "max_bw": 1500000,
+        "input_buffer": 1024000,
+        "output_buffer": 1024000,
+        "max_clients": 5
+    },
+    "ndi_settings": {
+        "tally_update_interval": 100,
+        "source_discovery_interval": 1000,
+        "program_tally_priority": true,
+        "groups": ["PTZ Cameras"]
+    }
+}
