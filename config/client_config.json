@@ -1,0 +1,40 @@
+{
+    "srt_server": {
+        "host": "127.0.0.1",
+        "port": 9000
+    },
+    "logging": {
+        "level": "info",
+        "file": "client.log"
+    },
+    "endpoints": [
+        {
+            "camera_id": 1,
+            "name": "Main Control PTZ",
+            "ip_address": "192.168.1.200",
+            "port": 52381,
+            "reconnect_interval": 5000,
+            "command_timeout": 2000
+        },
+        {
+            "camera_id": 2,
+            "name": "Secondary Control PTZ",
+            "ip_address": "192.168.1.201",
+            "port": 52381,
+            "reconnect_interval": 5000,
+            "command_timeout": 2000
+        }
+    ],
+    "srt_settings": {
+        "latency": 20,
+        "max_bw": 1500000,
+        "input_buffer": 1024000,
+        "output_buffer": 1024000,
+        "connection_timeout": 3000
+    },
+    "visca_settings": {
+        "max_message_size": 1500,
+        "retry_attempts": 3,
+        "retry_delay": 1000
+    }
+}

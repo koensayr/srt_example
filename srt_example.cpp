@@ -223,7 +223,6 @@ void srt_rendezvous(const std::string& local_host, int local_port,
 }
 
 int main(int argc, char* argv[]) {
-
     // Check for help flag
     if (argc < 2 || std::string(argv[1]) == "--help" || std::string(argv[1]) == "-h") {
         std::cout << "Usage: " << argv[0] << " <mode> [options]" << std::endl;

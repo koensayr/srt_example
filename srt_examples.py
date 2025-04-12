@@ -187,7 +187,7 @@ def main():
         print("\nOptions:")
         print("  peer2      - For rendezvous mode, use alternate port configuration")
         return 0 if sys.argv[1] in ['--help', '-h'] else 1
-    
+
     mode = sys.argv[1].lower()
     
     if mode == "caller":
