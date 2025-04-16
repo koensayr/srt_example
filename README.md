@@ -309,6 +309,25 @@ This repository contains example implementations of different SRT (Secure Reliab
 
 ## Installation
 
+### Using Docker
+You can build and run the project using Docker:
+
+```bash
+# Build the Docker image
+docker build -t visca-srt .
+
+# Run the server (using host network for SRT connectivity)
+docker run --network host visca-srt
+
+# Run the client (override default command)
+docker run --network host visca-srt visca_srt_client
+
+# Run with custom configuration
+docker run -v /path/to/config:/etc/visca_srt visca-srt
+```
+
+The Docker image uses a multi-stage build to minimize size and includes all necessary dependencies. The server configuration can be customized by mounting a local config directory to `/etc/visca_srt` in the container.
+
 ### Using Homebrew
 The easiest way to install on macOS is using Homebrew:
 
